@@ -1,0 +1,14 @@
+public class Main
+{
+  public static void main(String[] args)
+  {
+    System.out.println("Hello World");
+    System.out.print("I am a beginner");
+    int i = 4;
+    System.out.print(i);
+    double n = 1.23;
+    System.out.print(n);
+    boolean t = true;
+    System.out.print(t);
+  }
+}

@@ -4,9 +4,10 @@ public class Main
   public static void main(String[] args)
   {
     Scanner typein = new Scanner(System.in);
+    //1.2
     System.out.println("Hello World");
     System.out.println("I am a beginner");
-    
+    //1.3
     final int i = 4;
     System.out.println(i);
     double n = 1.23;
@@ -35,7 +36,7 @@ public class Main
     
     String name = typein.nextLine();
     System.out.println(name);
-    
+    //1.4
     System.out.println("Ok time for some compound assignment operators");
     int increase_num = 1;
     increase_num++;

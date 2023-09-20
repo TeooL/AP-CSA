@@ -8,16 +8,19 @@ public void assignColor(){
   System.out.println("What color is your seashell?");
   color = s.nextLine();
 }
+
 public void assignSize(){
   Scanner s = new Scanner(System.in);
   System.out.println("What size is your seashell?");
   size = s.nextLine();
 }
+
+public void display(String s, String c){
+  System.out.println("Your seashell is " + c + " and " + s);
+  }
+
 public void display(){
-  System.out.println("Your seashell is " + color + " and " + size);
+  System.out.println("Your seashell is " + color  + size);
+  }
+
 }
-}
-  
-   
-  
-           

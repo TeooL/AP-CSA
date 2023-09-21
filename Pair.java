@@ -1,14 +1,21 @@
 public class Pair
 {
-  private int first_num;
-  private int second_num;
+  private String first_num;
+  private String second_num;
 
-  public void showpair(int one, int two){
-    System.out.print("Your pair is " + one + " and " + two);
+  public void Pair(String one, String two)
+  {
+    System.out.println("Your pair is " + one + " and " + two);
   }
   
-  public void showpair(){
-    System.out.print("You do not have a pair");
+  public void roll()
+  {
+    System.out.println("Rolling!");
+  }
+  
+  public void Pair()
+  {
+    System.out.println("You didn't include numbers for a pair");
   }
 }
   

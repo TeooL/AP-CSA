@@ -66,7 +66,11 @@ public class Main
         {
             System.out.println("Ok I'll half it then");
             System.out.println((double) increase_num / 2);
-        Pair none = new Pair();
+        Pair x = new Pair();
+        x.Pair("1","7");
+        x.roll();
+        seashell s = new seashell();
+        s.assignSize();
         }
     }
 }

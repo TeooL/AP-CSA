@@ -77,11 +77,11 @@ public class Main
         
 // Start of Project
         
-        System.out.println("Welcome to my project, It's gonna be a text based RPG");
+        System.out.println("Welcome to my project, It's gonna be a math operations card game");
         System.out.println();
-        System.out.println("Alright, all you need to play is your keyboard since its TEXT BASED");
+        System.out.println("During the game, you get 7 random cards when you encounter enemies and you have to use math to defeat them by combining operations to deal damage, but BE CAREFUL as if you do more than enough damage, you will heal them.");
         System.out.println();
-        System.out.println("Here's the story, you wake up in a dungeon after being captured by an unknown group.\nTheres a wooden sword near the body of a skeleton in the corner of your room\nIt's time to venture through the dungeon and escape!");
+        System.out.println();
         
         }
     }

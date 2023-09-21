@@ -71,6 +71,18 @@ public class Main
         x.roll();
         seashell s = new seashell();
         s.assignSize();
+        
+        
+        
+        
+// Start of Project
+        
+        System.out.println("Welcome to my project, It's gonna be a text based RPG");
+        System.out.println();
+        System.out.println("Alright, all you need to play is your keyboard since its TEXT BASED");
+        System.out.println();
+        System.out.println("Here's the story, you wake up in a dungeon after being captured by an unknown group.\nTheres a wooden sword near the body of a skeleton in the corner of your room\nIt's time to venture through the dungeon and escape!");
+        
         }
     }
 }

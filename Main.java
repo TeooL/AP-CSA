@@ -69,8 +69,8 @@ public class Main
         Pair x = new Pair(1,7);
         x.display();
         x.roll();
-        seashell s = new seashell();
-        s.assignSize();
+        seashell s = new seashell("red", "small");
+
         
         
         
@@ -81,7 +81,10 @@ public class Main
         System.out.println();
         System.out.println("During the game, you get 7 random cards when you encounter enemies and you have to use math to defeat them by combining operations to deal damage, but BE CAREFUL as if you do more than enough damage, you will heal them.");
         System.out.println();
-        System.out.println();
+        System.out.println("Here comes a slime with 7 health, You are given the cards +18, /2, +4, -3, x3, -7, %2. Defeat Them.");
+        Card t1 = new Card(18, "Addition");
+        Card t2 = new Card(2, "Division");
+        
         
         }
     }

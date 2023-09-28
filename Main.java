@@ -33,13 +33,6 @@ public class Main
         }
 
         System.out.println(compound_expression_two);
-        System.out.println("Don't Mind This Line");
-        System.out.println("Time to add the scanner");
-        System.out.println("Ok Let's Test it out, Type your name");
-
-        String name = typein.nextLine();
-        typein.close();
-        System.out.println(name);
         //1.4
         System.out.println("Ok time for some compound assignment operators");
         int increase_num = 1;
@@ -58,34 +51,31 @@ public class Main
         System.out.println("Would you like to double this number?");
         typein = new Scanner(System.in);
         String yes_no = typein.nextLine();
-        if(yes_no == "yes")
-        {
+        if(yes_no == "yes"){
             System.out.println((double) increase_num * 2);
         }
-        else
-        {
+        else{
             System.out.println("Ok I'll half it then");
             System.out.println((double) increase_num / 2);
-        Pair x = new Pair(1,7);
-        x.display();
-        x.roll();
-        seashell s = new seashell("red", "small");
-
-        
-        
+        }
+       
         
         
 // Start of Project
-        
+        Scanner s = new Scanner(System.in);
         System.out.println("Welcome to my project, It's gonna be a math operations card game");
-        System.out.println();
-        System.out.println("During the game, you get 7 random cards when you encounter enemies and you have to use math to defeat them by combining operations to deal damage, but BE CAREFUL as if you do more than enough damage, you will heal them.");
-        System.out.println();
+        System.out.println("What is your name?");
+        String player_name = s.nextLine();
+        Player one = new Player(player_name, 3);
+        one.welcome_player();
         System.out.println("Here comes a slime with 7 health, You are given the cards +18, /2, +4, -3, x3, -7, %2. Defeat Them.");
         Card t1 = new Card(18, "Addition");
         Card t2 = new Card(2, "Division");
-        
+        Card t3 = new Card(4, "Addition");
+        Card t4 = new Card(3, "Subtraction");
+        Card t5 = new Card(3, "Multiplication");
+        Card t6 = new Card(7, "Subtraction");
+        Card t7 = new Card(2, "Mod");
         
         }
     }
-}

@@ -6,7 +6,9 @@ public Card(int v , String o)
 {
   value = v;
   operation = o;
-  }
 }
+
+}
+
 
   

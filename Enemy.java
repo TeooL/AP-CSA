@@ -11,5 +11,18 @@ public Enemy(String enemy_type, int enemy_hp, int defense, int charge_attack_val
   this.defense = defense;
   this.charge_attack_val = charge_attack_val;
  }
+public int getHp(){
+  return enemy_hp;
+}
+public void setHp(int set_val){
+  enemy_hp = set_val;
+}
+public String getEnemy_type(){
+  return enemy_type;
+}
+public int getDefense(){
+  return defense;
+}
+
 }
 

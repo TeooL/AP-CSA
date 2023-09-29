@@ -22,5 +22,11 @@ public void welcome_player(){ // Welcomes the player and explains how to play th
   System.out.println("You also have 3 lives which can be lost upon not defeating an enemy in the given amount of turns");
   System.out.println("Each enemy has a set amount of turns which you will need to combine cards to defeat them");
 }
+public void attack_enemy(Enemy x, int damage){
+  int after_defense_dmg = damage/x.getDefense();
+  int hp_after = x.getHp() - after_defense_dmg;
+  x.setHp(hp_after);
+  System.out.println("The " + x.getEnemy_type() + " has " + hp_after + " hp left");
+}
 }
   

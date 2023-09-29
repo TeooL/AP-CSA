@@ -68,7 +68,8 @@ public class Main
         String player_name = s.nextLine();
         Player one = new Player(player_name, 3);
         one.welcome_player();
-        System.out.println("Here comes a slime with 7 health, You are given the cards +18, /2, +4, -3, x3, -7, %2. Defeat Them.");
+        System.out.println("Here comes a slime with 21 health, You are given the cards +18, /2, +4, -3, x3, -7, %2. Defeat Them.");
+        Enemy slime = new Enemy("Slime", 21, 1, 7);
         Card t1 = new Card(18, "Addition");
         Card t2 = new Card(2, "Division");
         Card t3 = new Card(4, "Addition");
@@ -76,6 +77,6 @@ public class Main
         Card t5 = new Card(3, "Multiplication");
         Card t6 = new Card(7, "Subtraction");
         Card t7 = new Card(2, "Mod");
-        
+        one.attack_enemy(slime, 18);
         }
     }

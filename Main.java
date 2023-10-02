@@ -63,7 +63,6 @@ public class Main
         
 // Start of Project
         Scanner s = new Scanner(System.in);
-        System.out.println("Welcome to my project, It's gonna be a math operations card game");
         System.out.println("What is your name?");
         String player_name = s.nextLine();
         Player one = new Player(player_name, 3);

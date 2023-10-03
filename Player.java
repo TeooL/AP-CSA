@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Player{
   String name;
   int lives;
@@ -50,6 +52,12 @@ public void form_attack(Card x){
     attack_value %= x.getValue();
   }
  }
+public void decide_action(){
+  System.out.println("What do you do?\n(1)Attack\n(2)Form Attack\n(3)Draw a card\n(4)Display Current Attack Value");
+  Scanner action_input = new Scanner(System.in);
+  int action = action_input.nextInt();
+  }
 }
+
 
   

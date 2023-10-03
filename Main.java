@@ -48,10 +48,11 @@ public class Main
         //1.5
         System.out.println("Ok lets add pi to it");
         System.out.println((double)increase_num + 3.14);
+        increase_num += 3.14;
         System.out.println("Would you like to double this number?");
         typein = new Scanner(System.in);
         String yes_no = typein.nextLine();
-        if(yes_no == "yes"){
+        if(yes_no.equals("yes")){
             System.out.println((double) increase_num * 2);
         }
         else{
@@ -77,5 +78,6 @@ public class Main
         Card t6 = new Card(7, "Subtraction");
         Card t7 = new Card(2, "Mod");
         one.attack_enemy(slime, 18);
+        one.decide_action();
         }
     }

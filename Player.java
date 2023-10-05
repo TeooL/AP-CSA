@@ -68,9 +68,10 @@ public void decide_action(){
     attack_enemy(getCurrent_enemy(), getAttack_value());
     }
   else if (action == 2){
-//    Card card_attack = action_input.nextLine();
+    System.out.println("Which card do you want to use? Select cards from 1-7 based on their order");
+    int card_attack = action_input.nextInt();
 //    form_attack(card_attack); // Fix this next time
-//    System.out.println("Your current attack value is " + attack_value);
+    System.out.println("Your new attack value is " + attack_value);
     }
   }
 
@@ -83,27 +84,3 @@ public int getAttack_value(){
   }
 
 }
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

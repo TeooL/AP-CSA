@@ -26,19 +26,18 @@ public void welcome_player(){ // Welcomes the player and explains how to play th
   System.out.println();
   System.out.println("During the game, you get 7 random cards when you encounter enemies and you have to use math to defeat them by combining operations to deal damage, but BE CAREFUL as if you do more than enough damage, you will heal them.");
   System.out.println();
-  System.out.println("The operations follow the order of operations, so be careful on what your intended order is");
   System.out.println("You also have 3 lives which can be lost upon not defeating an enemy in the given amount of turns");
   System.out.println("Each enemy has a set amount of turns which you will need to combine cards to defeat them");
   }
 
-public void attack_enemy(Enemy x, int damage){
+public void attack_enemy(Enemy x, int damage){ //Function for Action 1
   int after_defense_dmg = damage/x.getDefense();
   int hp_after = x.getHp() - after_defense_dmg;
   x.setHp(hp_after);
   System.out.println("The " + x.getEnemy_type() + " has " + hp_after + " hp left");
   }
 
-public void form_attack(Card x){
+public void form_attack(Card x){ //Function for Action 2
   if (attack_value <= 0){
     attack_value += x.getValue();
   }
@@ -70,8 +69,14 @@ public void decide_action(){
   else if (action == 2){
     System.out.println("Which card do you want to use? Select cards from 1-7 based on their order");
     int card_attack = action_input.nextInt();
-//    form_attack(card_attack); // Fix this next time
+//    form_attack(getCard(card_attack)); // Fix this next time
     System.out.println("Your new attack value is " + attack_value);
+    }
+  else if (action == 3){
+    //Implement Functionality
+    }
+  else if (action == 4){
+    System.out.println("Your current attack value is " + getAttack_value());
     }
   }
 

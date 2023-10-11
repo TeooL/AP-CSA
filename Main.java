@@ -77,6 +77,7 @@ public class Main
         Card c5 = new Card(3, "Multiplication");
         Card c6 = new Card(7, "Subtraction");
         Card c7 = new Card(2, "Mod");
+        Deck do7 = new Deck(c1,c2,c3,c4,c5,c6,c7);
         one.attack_enemy(slime, 18);
         one.decide_action();
         }

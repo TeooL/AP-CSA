@@ -44,6 +44,10 @@ public class Deck{
         return placeholder;
     }
   }
+  public Card getCard1(){
+    return c1;
+  }
+  // Add remaining get cards next time and implement a way to display all the cards
 }
 
 

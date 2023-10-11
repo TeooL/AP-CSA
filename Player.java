@@ -23,6 +23,7 @@ public void assign_enemy(Enemy e){
 
 public void welcome_player(){ // Welcomes the player and explains how to play the game
   System.out.println("WELCOME TO MY GAME " + name);
+  System.out.println("It's called Cards Attack");
   System.out.println();
   System.out.println("During the game, you get 7 random cards when you encounter enemies and you have to use math to defeat them by combining operations to deal damage, but BE CAREFUL as if you do more than enough damage, you will heal them.");
   System.out.println();
@@ -59,7 +60,7 @@ public void form_attack(Card x){ //Function for Action 2
  }
 
 public void decide_action(){
-  System.out.println("What do you do?\n(1)Attack\n(2)Form Attack\n(3)Draw a card\n(4)Display Current Attack Value");
+  System.out.println("What do you do?\n(1)Attack\n(2)Form Attack\n(3)Draw a card\n(4)Display Current Attack Value\n(5)Display Current Cards");
   Scanner action_input = new Scanner(System.in);
   int action = action_input.nextInt();
   if (action == 1){
@@ -69,7 +70,7 @@ public void decide_action(){
   else if (action == 2){
     System.out.println("Which card do you want to use? Select cards from 1-7 based on their order");
     int card_attack = action_input.nextInt();
-//    form_attack(getCard(card_attack)); // Fix this next time
+    form_attack(deck.getCard(card_attack)); // Fix this next time
     System.out.println("Your new attack value is " + attack_value);
     }
   else if (action == 3){
@@ -87,5 +88,12 @@ public Enemy getCurrent_enemy(){
 public int getAttack_value(){
   return attack_value;
   }
-
+  Card c1 = new Card();
+  Card c2 = new Card();
+  Card c3 = new Card();
+  Card c4 = new Card();
+  Card c5 = new Card();
+  Card c6 = new Card();
+  Card c7 = new Card();
+  Deck deck = new Deck(c1,c2,c3,c4,c5,c6,c7);
 }

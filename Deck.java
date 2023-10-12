@@ -47,7 +47,26 @@ public class Deck{
   public Card getCard1(){
     return c1;
   }
-  // Add remaining get cards next time and implement a way to display all the cards
+  public Card getCard2(){
+    return c2;
+  }
+  public Card getCard3(){
+    return c3;
+  }
+  public Card getCard4(){
+    return c4;
+  }
+  public Card getCard5(){
+    return c5;
+  }
+  public Card getCard6(){
+    return c6;
+  }
+  public Card getCard7(){
+    return c7;
+  }
+  public void changeCard(int x){
+  }  
 }
 
 

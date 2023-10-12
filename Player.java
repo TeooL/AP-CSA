@@ -25,7 +25,8 @@ public void welcome_player(){ // Welcomes the player and explains how to play th
   System.out.println("WELCOME TO MY GAME " + name);
   System.out.println("It's called Cards Attack");
   System.out.println();
-  System.out.println("During the game, you get 7 random cards when you encounter enemies and you have to use math to defeat them by combining operations to deal damage, but BE CAREFUL as if you do more than enough damage, you will heal them.");
+  System.out.println("During the game, you get 7 random cards when you encounter enemies and you have to use math to defeat them by using the value and operations to deal damage, but BE CAREFUL as if you do more than enough damage, you will heal them.");
+  System.out.println("The cards do not go away when you use them, so you can use the same value and operations a lot of times, however you can also replace them."); 
   System.out.println();
   System.out.println("You also have 3 lives which can be lost upon not defeating an enemy in the given amount of turns");
   System.out.println("Each enemy has a set amount of turns which you will need to combine cards to defeat them");
@@ -60,7 +61,7 @@ public void form_attack(Card x){ //Function for Action 2
  }
 
 public void decide_action(){
-  System.out.println("What do you do?\n(1)Attack\n(2)Form Attack\n(3)Draw a card\n(4)Display Current Attack Value\n(5)Display Current Cards");
+  System.out.println("What do you do?\n(1)Attack\n(2)Form Attack\n(3)Replace a card\n(4)Display Current Attack Value\n(5)Display Current Cards");
   Scanner action_input = new Scanner(System.in);
   int action = action_input.nextInt();
   if (action == 1){
@@ -70,14 +71,30 @@ public void decide_action(){
   else if (action == 2){
     System.out.println("Which card do you want to use? Select cards from 1-7 based on their order");
     int card_attack = action_input.nextInt();
-    form_attack(deck.getCard(card_attack)); // Fix this next time
-    System.out.println("Your new attack value is " + attack_value);
+    try 
+    {
+      form_attack(deck.getCard(card_attack)); 
+      System.out.println("Your new attack value is " + attack_value);
+    }
+    catch (NullPointerException e)
+    {
+      System.out.println("Invalid Card Number");
+    }
     }
   else if (action == 3){
-    //Implement Functionality
+    
     }
   else if (action == 4){
     System.out.println("Your current attack value is " + getAttack_value());
+    }
+  else if (action == 5){
+    System.out.println("First Card is value " + (deck.getCard1()).getValue() + " with operation " + (deck.getCard1()).getOperation());
+    System.out.println("Second Card is value " + (deck.getCard2()).getValue() + " with operation " + (deck.getCard2()).getOperation());
+    System.out.println("Third Card is value " + (deck.getCard3()).getValue() + "with operation" + (deck.getCard3()).getOperation());
+    System.out.println("Fourth Card is value " + (deck.getCard4()).getValue() + "with operation" + (deck.getCard4()).getOperation());
+    System.out.println("Fifth Card is value " + (deck.getCard5()).getValue() + "with operation" + (deck.getCard5()).getOperation());
+    System.out.println("Sixth Card is value " + (deck.getCard6()).getValue() + "with operation" + (deck.getCard6()).getOperation());
+    System.out.println("Seventh Card is value " + (deck.getCard7()).getValue() + "with operation" + (deck.getCard7()).getOperation());
     }
   }
 
@@ -95,5 +112,5 @@ public int getAttack_value(){
   Card c5 = new Card();
   Card c6 = new Card();
   Card c7 = new Card();
-  Deck deck = new Deck(c1,c2,c3,c4,c5,c6,c7);
+  Deck deck = new Deck(c1,c2,c3,c4,c5,c6,c7); // Player's Deck
 }

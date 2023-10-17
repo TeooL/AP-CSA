@@ -69,10 +69,13 @@ public class Main
         Player one = new Player(player_name, 3);
         one.welcome_player();
         System.out.println("Here comes a slime with 21 health");
-        Enemy slime = new Enemy("Slime", 21, 1, 7);
+        Enemy slime = new Enemy("Slime", 21, 1);
         one.decide_action();
-        while (slime.getHp() != 0){
+        int turns_left = 20;
+        while (slime.getHp() != 0 || turns_left != 0){
           one.decide_action();
+          turns_left -= 1;
+          System.out.println("You have " + turns_left + " turns left.");
           }
         }
     }

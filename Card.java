@@ -37,7 +37,7 @@ public class Card{
   }
   public void newCard(){ //Gives card a new operation and value 1 - 10
     Random rand = new Random();
-    value = rand.nextInt(11);
+    value = rand.nextInt(10) + 1;
     int operation_assignment = rand.nextInt(5);
     if (operation_assignment == 0){
       operation = "Addition";

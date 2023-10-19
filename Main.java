@@ -65,7 +65,7 @@ public class Main
 // Start of Project
     Scanner s = new Scanner(System.in);
     System.out.println("What is your name?");
-    String player_name = s.nextLine();
+    final String player_name = s.nextLine();
     Player one = new Player(player_name, 3);
     one.welcome_player();
     System.out.println("Here comes a slime with 21 health");
@@ -79,6 +79,9 @@ public class Main
       System.out.println("You have " + turns_left + " turns left.");
     }
     if (turns_left != 0){
+      System.out.println();
+      System.out.println();
+      System.out.println();
       System.out.println("You have defeated the slime.");
       System.out.println("You have two choices of where to go next");
       System.out.println("The forest or the cave? Choose carefully");
@@ -89,22 +92,34 @@ public class Main
         System.out.println("You feel thrilled that you might see another human again after waking in this strange world with a deck of cards.");
         System.out.println("However, you hear a twig snap and a large wolf walks into view, staring at you with its teeth bared. GOOD LUCK!");
         Enemy wolf = new Enemy("Wolf", 101, 2);
+        one.assign_enemy(wolf);
         turns_left = 15;
         while (wolf.getHp() != 0 && turns_left != 0){
           one.decide_action();
           turns_left -= 1;
           System.out.println("You have " + turns_left + " turns left.");
-          }  
-        }
+        }  
+      }
       else if (next_location.equals("cave")){
         System.out.println("The cave, a dark and mysterious place, who knows what might lurk in those tunnels");
         System.out.println("On your way to the cave, you spot a lit lamp next to the cave entrance.");
         System.out.println("Wow, just your luck, It's time to enter.");
+        System.out.println("A few minutes past as you enter the cave and after turning a corner, you see a brightly lit area by some lava showing a fist sized emerald imbedded in the wall.");
+        System.out.println("As you start to walk toward emerald, you hear bones rattling and out comes a skeleton with a sword and shield!");
+        System.out.println("Since when was there living skeletons in this world??? Anyways GOOD LUCK!");
+        Enemy skeleton = new Enemy("Skeleton", 101, 2);
+        one.assign_enemy(skeleton);
+        turns_left = 15;
+        while (skeleton.getHp() != 0 && turns_left != 0){
+          one.decide_action();
+          turns_left -= 1;
+          System.out.println("You have " + turns_left + " turns left.");
         }
       }
-    else{
-      System.out.println("You are dead!");
-      System.out.println("How did you lose to a slime? Try mathing more");
+      else{
+        System.out.println("You are dead!");
+        System.out.println("How did you lose to a slime? Try mathing more");
+      }
+    }
   }
- }
 }

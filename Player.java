@@ -47,16 +47,16 @@ public class Player{
     else if (x.getOperation().equals("Addition")){
       attack_value += x.getValue();
     }
-    else if (x.getOperation().equals( "Subtraction")){
+    else if (x.getOperation().equals("Subtraction")){
       attack_value -= x.getValue();
     }
-    else if (x.getOperation() == "Division"){ // Add .equals for the rest of the operations
+    else if (x.getOperation().equals("Division")){ // Add .equals for the rest of the operations
       attack_value /= x.getValue();
     }
-    else if (x.getOperation() == "Multiply"){
+    else if (x.getOperation().equals("Multiplication")){
       attack_value *= x.getValue();
     }
-    else if (x.getOperation() == "Mod"){
+    else if (x.getOperation().equals("Mod")){
       attack_value %= x.getValue();
     }
   }
@@ -65,12 +65,19 @@ public class Player{
     System.out.println("Your current attack value is " + getAttack_value());
     System.out.println();
     System.out.println("First Card is value " + (deck.getCard1()).getValue() + " with operation " + (deck.getCard1()).getOperation());
+    System.out.println();
     System.out.println("Second Card is value " + (deck.getCard2()).getValue() + " with operation " + (deck.getCard2()).getOperation());
+    System.out.println();
     System.out.println("Third Card is value " + (deck.getCard3()).getValue() + " with operation " + (deck.getCard3()).getOperation());
+    System.out.println();
     System.out.println("Fourth Card is value " + (deck.getCard4()).getValue() + " with operation " + (deck.getCard4()).getOperation());
+    System.out.println();
     System.out.println("Fifth Card is value " + (deck.getCard5()).getValue() + " with operation " + (deck.getCard5()).getOperation());
+    System.out.println();
     System.out.println("Sixth Card is value " + (deck.getCard6()).getValue() + " with operation " + (deck.getCard6()).getOperation());
+    System.out.println();
     System.out.println("Seventh Card is value " + (deck.getCard7()).getValue() + " with operation " + (deck.getCard7()).getOperation());
+    System.out.println();
     System.out.println("What do you do?\n(1)Attack\n(2)Form Attack\n(3)Replace a card");
     Scanner action_input = new Scanner(System.in);
     int action = action_input.nextInt();

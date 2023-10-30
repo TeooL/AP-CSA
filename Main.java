@@ -46,9 +46,15 @@ public class Main
               turns_left -= 1;
               System.out.println("You have " + turns_left + " turns left.");
             }
+            if (turns_left != 0){
+              game.endingOne();
+            }
+            else{
+              System.out.println("You have been defeated");
+            }
           }
           else if (next_location.equals("wizard tower")){
-//            game.evilwizardEncounter();
+            game.evilwizardEncounter();
             Enemy evilwizard = new Enemy("Evil Wizard", 250, 8);
             one.assign_enemy(evilwizard);
             turns_left = 8;
@@ -57,18 +63,18 @@ public class Main
               turns_left -= 1;
               System.out.println("You have " + turns_left + " turns left.");
               if (turns_left != 0){
-//                game.endingtwo();
+                game.endingTwo();
               }
               else{
                 System.out.println("You have been defeated");
               }
             }
           }
-          else{
+        else{
             System.out.println("You have been defeated");
           }
         }
-        else if (next_location.equals("cave")){
+      else if (next_location.equals("cave")){
           game.skeletonEncounter();
           Enemy skeleton = new Enemy("Skeleton", 101, 2);
           one.assign_enemy(skeleton);
@@ -80,10 +86,10 @@ public class Main
           }
         }
         else{
-          System.out.println("You are dead!");
-          System.out.println("How did you lose to a slime? Try mathing more");
+          System.out.println("You have been defeated");
         }
       }
     }
   }
 }
+

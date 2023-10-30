@@ -44,4 +44,31 @@ public class Dialogue{
     System.out.println("As you start to walk toward emerald, you hear bones rattling and out comes a skeleton with a sword and shield!");
     System.out.println("Since when was there living skeletons in this world??? Anyways GOOD LUCK!");
   }
+  public void evilwizardEncounter(){
+    System.out.println("You reach the wizard tower after a few hours and you open the front door, showing a spiral staircase leading up");
+    System.out.println("You start walking up and upon reaching the top, there is a door.");
+    System.out.println("You open the door and see an old man with a long beard looking down at a crystal ball");
+    System.out.println("The wizard looks up and sees you");
+    System.out.println("Get out of here! You'll never go back to your world!");
+    System.out.println("It seems this wizard knows something about how you arrived in this world");
+    System.out.println("Maybe that crystal ball has some answers");
+    System.out.println("Either way, this wizard does not seem to be friendly");
+  }
+  public void endingOne(){
+    System.out.println("You have defeated the dragon!");
+    System.out.println("The villagers that were once screaming come out of their houses to see what has happened");
+    System.out.println("They gather around you and see the dead dragon on the ground");
+    System.out.println("They all cheer and you are known as the hero of the village!");
+    System.out.println("You spend a few days in the village afterwards and think that a simple life isn't so bad");
+    System.out.println("You make the decision to stay in this village for the rest of your life, never getting a chance to find out how you got into this world.");
+  }
+  public void endingTwo(){
+    System.out.println("You have defeated the evil wizard!");
+    System.out.println("It's time to see what this wizard was keeping from you");
+    System.out.println("You walk towards the crystal ball across the room.");
+    System.out.println("As you get closer, it shines brighter, almost blinding you when you are right next to it.");
+    System.out.println("You pick up the crystal ball and you pass out");
+    System.out.println("As you wake, you find yourself back in the real world");
+    System.out.println("Right in front of the computer...");
+  }
 }

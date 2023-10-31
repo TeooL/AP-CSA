@@ -70,26 +70,55 @@ public class Main
               }
             }
           }
-        else{
+          else{
             System.out.println("You have been defeated");
           }
         }
+      }
       else if (next_location.equals("cave")){
-          game.skeletonEncounter();
-          Enemy skeleton = new Enemy("Skeleton", 101, 2);
-          one.assign_enemy(skeleton);
-          turns_left = 15;
-          while (skeleton.getHp() != 0 && turns_left != 0){
-            one.decide_action();
-            turns_left -= 1;
-            System.out.println("You have " + turns_left + " turns left.");
+        game.skeletonEncounter();
+        Enemy skeleton = new Enemy("Skeleton", 101, 2);
+        one.assign_enemy(skeleton);
+        turns_left = 15;
+        while (skeleton.getHp() != 0 && turns_left != 0){
+          one.decide_action();
+          turns_left -= 1;
+          System.out.println("You have " + turns_left + " turns left.");
+        }
+        if (turns_left != 0){
+          game.defeated_Skeleton();
+          next_location = s.nextLine();
+          if (next_location.equals("outside")){
+            game.banditEncounter();
+            Enemy bandit = new Enemy("Bandit", 100, 5);
+            one.assign_enemy(bandit);
+            turns_left = 8;
+            while (bandit.getHp() != 0 && turns_left != 0){
+              one.decide_action();
+              turns_left -= 1;
+              System.out.println("You have " + turns_left + " turns left.");
+            }
+            if (turns_left != 0)game.endingThree();
+          }
+          else if (next_location.equals("dungeon")){
+            game.wardenEncounter();
+            Enemy warden = new Enemy("Warden", 400, 10);
+            one.assign_enemy(warden);
+            turns_left = 8;
+            while (warden.getHp() != 0 && turns_left != 0){
+              one.decide_action();
+              turns_left -= 1;
+              System.out.println("You have " + turns_left + " turns left.");
+            }
+            if (turns_left != 0)game.endingFour();
+            else System.out.println("You have been defeated");
           }
         }
-        else{
-          System.out.println("You have been defeated");
-        }
+        else System.out.println("You have been defeated");
       }
+      else System.out.println("You have been defeated");
     }
   }
 }
+
 

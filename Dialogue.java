@@ -28,6 +28,14 @@ public class Dialogue{
     System.out.println("However, in the distance, you spot a village to the left of the wizard tower.");
     System.out.println("Where do you want to go?");
   }
+  public void defeated_Skeleton(){
+    System.out.println("You have defeated the skeleton");
+    System.out.println("You walk over to the emerald and pluck it out of the wall");
+    System.out.println("This looks pretty valuable");
+    System.out.println("You wander a bit deeper into the cave and encounter a large door with mossy walls.");
+    System.out.println("This is most likely a dungeon. Its usually dangerous, but there might be riches inside");
+    System.out.println("Do you enter the dungeon or go outside the cave?");
+  }
   public void dragonEncounter(){
     System.out.println("The village it is");
     System.out.println("Hopefully you don't meet any wild beasts on the way");
@@ -54,6 +62,10 @@ public class Dialogue{
     System.out.println("Maybe that crystal ball has some answers");
     System.out.println("Either way, this wizard does not seem to be friendly");
   }
+  public void banditEncounter(){
+  }
+  public void wardenEncounter(){
+  }
   public void endingOne(){
     System.out.println("You have defeated the dragon!");
     System.out.println("The villagers that were once screaming come out of their houses to see what has happened");
@@ -70,5 +82,9 @@ public class Dialogue{
     System.out.println("You pick up the crystal ball and you pass out");
     System.out.println("As you wake, you find yourself back in the real world");
     System.out.println("Right in front of the computer...");
+  }
+  public void endingThree(){
+  }
+  public void endingFour(){
   }
 }

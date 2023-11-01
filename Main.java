@@ -16,6 +16,7 @@ public class Main
     one.decide_action();
     int turns_left = 20;
     while (slime.getHp() != 0 && turns_left != 0){
+      displayDefense(slime);
       one.decide_action();
       turns_left -= 1;
       System.out.println("You have " + turns_left + " turns left.");
@@ -29,6 +30,7 @@ public class Main
         one.assign_enemy(wolf);
         turns_left = 15;
         while (wolf.getHp() != 0 && turns_left != 0){
+          displayDefense(wolf);
           one.decide_action();
           turns_left -= 1;
           System.out.println("You have " + turns_left + " turns left.");
@@ -42,6 +44,7 @@ public class Main
             one.assign_enemy(dragon);
             turns_left = 8;
             while (dragon.getHp() != 0 && turns_left != 0){
+              displayDefense(dragon);
               one.decide_action();
               turns_left -= 1;
               System.out.println("You have " + turns_left + " turns left.");
@@ -59,15 +62,16 @@ public class Main
             one.assign_enemy(evilwizard);
             turns_left = 8;
             while (evilwizard.getHp() != 0 && turns_left != 0){
+              displayDefense(evilwizard);
               one.decide_action();
               turns_left -= 1;
               System.out.println("You have " + turns_left + " turns left.");
-              if (turns_left != 0){
-                game.endingTwo();
-              }
-              else{
-                System.out.println("You have been defeated");
-              }
+            }
+            if (turns_left != 0){
+              game.endingTwo();
+            }
+            else{
+              System.out.println("You have been defeated");
             }
           }
           else{
@@ -81,6 +85,7 @@ public class Main
         one.assign_enemy(skeleton);
         turns_left = 15;
         while (skeleton.getHp() != 0 && turns_left != 0){
+          displayDefense(skeleton);
           one.decide_action();
           turns_left -= 1;
           System.out.println("You have " + turns_left + " turns left.");
@@ -94,6 +99,7 @@ public class Main
             one.assign_enemy(bandit);
             turns_left = 8;
             while (bandit.getHp() != 0 && turns_left != 0){
+              displayDefense(bandit);
               one.decide_action();
               turns_left -= 1;
               System.out.println("You have " + turns_left + " turns left.");
@@ -106,6 +112,7 @@ public class Main
             one.assign_enemy(warden);
             turns_left = 8;
             while (warden.getHp() != 0 && turns_left != 0){
+              displayDefense(warden);
               one.decide_action();
               turns_left -= 1;
               System.out.println("You have " + turns_left + " turns left.");
@@ -118,6 +125,9 @@ public class Main
       }
       else System.out.println("You have been defeated");
     }
+  }
+  public static void displayDefense(Enemy e){
+    System.out.println("The enemy has " + e.getDefense() + " armor.");
   }
 }
 

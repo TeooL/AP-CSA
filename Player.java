@@ -36,8 +36,15 @@ public class Player{
     int after_defense_dmg = damage/x.getDefense();
     int hp_after = x.getHp() - after_defense_dmg;
     x.setHp(hp_after);
+    if (x.getHp() < 0){
+      x.setHp(Math.abs(x.getHp()));
+      System.out.println("You dealt too much damage. The " + x.getEnemy_type() + " healed " + Math.abs(x.getHp()));
+      attack_value = 0;
+    }
+    else{
     System.out.println("The " + x.getEnemy_type() + " has " + hp_after + " hp left");
     attack_value = 0;
+    }
   }
   
   public void form_attack(Card x){ //Function for Action 2
@@ -50,7 +57,7 @@ public class Player{
     else if (x.getOperation().equals("Subtraction")){
       attack_value -= x.getValue();
     }
-    else if (x.getOperation().equals("Division")){ // Add .equals for the rest of the operations
+    else if (x.getOperation().equals("Division")){ 
       attack_value /= x.getValue();
     }
     else if (x.getOperation().equals("Multiplication")){

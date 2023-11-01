@@ -63,8 +63,21 @@ public class Dialogue{
     System.out.println("Either way, this wizard does not seem to be friendly");
   }
   public void banditEncounter(){
+    System.out.println("You chose to leave.");
+    System.out.println("You retrace your path from the entrance to the cave and reach the opening to the outside.");
+    System.out.println("You see the endless plains and the forest once again.");
+    System.out.println("Suddenly, you hear shuffling in the nearby bushes and a lone bandit jumps out lunging out you!");
+    System.out.println("It seems he is after the emerald that you got");
+    System.out.println("Was he following you all along?");
+    System.out.println("You manage to dodge it, but it doesn't look like this bandit is giving up.");
   }
   public void wardenEncounter(){
+    System.out.println("You chose to enter the dungeon. Very well.");
+    System.out.println("As you open the big door, there is a large hall and multiple doorways.");
+    System.out.println("There is a large figure with their back to you standing in the middle");
+    System.out.println("They slowly turn around and see an armored soldier with a mace.");
+    System.out.println("You shall not pass");
+    System.out.println("Looks like you cannot proceed without defeating this soldier.");
   }
   public void endingOne(){
     System.out.println("You have defeated the dragon!");
@@ -82,9 +95,35 @@ public class Dialogue{
     System.out.println("You pick up the crystal ball and you pass out");
     System.out.println("As you wake, you find yourself back in the real world");
     System.out.println("Right in front of the computer...");
+    System.out.println("Was it all just a dream?");
   }
   public void endingThree(){
+    System.out.println("The fight is over");
+    System.out.println("The bandit runs away, but while running he drops a strange device shaped like a watch");
+    System.out.println("You walk over and check the device");
+    System.out.println("It reads scan a gemstone to return");
+    System.out.println("Return? What is return?");
+    System.out.println("Luckily you have an emerald that you could scan");
+    System.out.println("You put on the device and scan the emerald.");
+    System.out.println("Suddenly, you are enveloped in a beam of light and you become unconcious");
+    System.out.println("You wonder what happened and should you have scanned that gem?");
+    System.out.println("When you wake up, you are in front of a computer, back in the real world.");
+    System.out.println("Was it all just a dream?");
   }
   public void endingFour(){
+    System.out.println("You have defeated the warden.");
+    System.out.println("The warden dropped a key.");
+    System.out.println("All the doors are open except for one.");
+    System.out.println("It was the door behind the warden");
+    System.out.println("You walk to the door and check if its locked.");
+    System.out.println("Yep, its locked, you open the door");
+    System.out.println("Behind the door is a frame for a portal");
+    System.out.println("There seems to be gemstones of many kinds in each frame.");
+    System.out.println("All except for one, it seems your emerald is the perfect fit for the frame.");
+    System.out.println("You insert the gem and the portal activates.");
+    System.out.println("It's time to go.");
+    System.out.println("You go through the portal and you are blinded.");
+    System.out.println("When you gain vision again, you are in front of your computer.");
+    System.out.println("Was it all just a dream?");
   }
 }

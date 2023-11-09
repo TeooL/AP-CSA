@@ -4,7 +4,43 @@ public class Main
     public static void main(String[] args)
     {
 // Start of Project
+        System.out.println("Lets see something cool");
+        System.out.println("Choose a whole number to divide 4 by");
         Scanner s = new Scanner(System.in);
+        Integer number_chosen = new Integer(s.nextInt());
+        try {
+            double four = 3.0;
+            four ++;
+            double result = 4.0 / number_chosen;
+            System.out.println(result);
+        }
+        catch(ArithmeticException e){
+            System.out.println("Why did you input 0");
+        }
+        System.out.println("How about something else?");
+        System.out.println("Enter two numbers");
+        int num1 = s.nextInt();
+        int num2 = s.nextInt();
+        s.nextLine();
+        equals(num1, num2);
+        System.out.println("Input a word");
+        String word = s.nextLine();
+        System.out.println("Lets print a part of it");
+        System.out.println("Enter the index of the string you want to print to from 0.");
+        try{
+        int position = s.nextInt();
+        s.nextLine();
+        System.out.println(word.substring(0,position));
+        }
+        catch (StringIndexOutOfBoundsException e){
+            System.out.println("Out of bounds");
+        }
+        String word2 = word.toString();
+        System.out.print(word +  " is " + word2);
+        System.out.println();
+        System.out.println("Ok time to start");
+
+
         Dialogue game = new Dialogue();
         System.out.println("What is your name?");
         final String player_name = s.nextLine();
@@ -12,6 +48,7 @@ public class Main
         one.welcome_player();
         game.slimeEncounter();
         Enemy slime = new Enemy("Slime", 21);
+        System.out.println("Also known as " + slime);
         one.assign_enemy(slime);
         int turns_left = 20;
         while (slime.getHp() != 0 && turns_left != 0){
@@ -22,7 +59,7 @@ public class Main
                 one.setAttack_value(0);
             }
             one.decide_action();
-            turns_left -= 1;
+            turns_left --;
             System.out.println("You have " + turns_left + " turns left.");
         }
         if (turns_left != 0){
@@ -152,6 +189,10 @@ public class Main
 }
     public static boolean isAttackNegative(int attack_value){
         return attack_value < 0;
+    }
+    public static void equals(int x, int y){
+        if (x == y) System.out.println("They are the same.");
+        else System.out.println("They are different.");
     }
 }
 

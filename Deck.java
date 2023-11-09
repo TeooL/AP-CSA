@@ -7,7 +7,7 @@ public class Deck{
     private Card c5;
     private Card c6;
     private Card c7;
-    private Card placeholder;
+    private Card placeholder = null;
 
     public Deck(Card c1, Card c2, Card c3, Card c4, Card c5, Card c6, Card c7){
         this.c1 = c1;
@@ -44,6 +44,9 @@ public class Deck{
         else{
             return placeholder;
         }
+    }
+    public Card getCard(){
+        return placeholder;
     }
     public Card getCard1(){
         return c1;

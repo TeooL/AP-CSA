@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.lang.Math;
 public class Player{
     String name;
     int attack_value;
@@ -43,10 +43,12 @@ public class Player{
         if (x.getHp() < 0){
             x.setHp(Math.abs(x.getHp()));
             System.out.println("You dealt too much damage. The " + x.getEnemy_type() + " healed " + Math.abs(x.getHp()));
+            System.out.println();
             attack_value = 0;
         }
         else{
             System.out.println("The " + x.getEnemy_type() + " has " + hp_after + " hp left");
+            System.out.println();
             attack_value = 0;
         }
     }
@@ -62,7 +64,7 @@ public class Player{
             attack_value -= x.getValue();
         }
         else if (x.getOperation().equals("/")){
-            attack_value /= x.getValue();
+            attack_value = Math.round((float)attack_value / x.getValue());
         }
         else if (x.getOperation().equals("*")){
             attack_value *= x.getValue();
@@ -93,16 +95,9 @@ public class Player{
         System.out.println("What do you do?\n(1)Attack\n(2)Form Attack\n(3)Replace a card");
         Scanner action_input = new Scanner(System.in);
         int action = action_input.nextInt();
-        if (action == 1){
+        if (action == 1) {
             System.out.println("Attacking!");
-            try
-            {
-                attack_enemy(getCurrent_enemy(), getAttack_value());
-            }
-            catch (ArithmeticException e)
-            {
-                System.out.println("Why would you attack when your value is 0? What a waste of a turn.");
-            }
+            attack_enemy(getCurrent_enemy(), getAttack_value());
         }
         else if (action == 2){
             System.out.println("Which card do you want to use? Select cards from 1-7 based on their order");
@@ -114,7 +109,7 @@ public class Player{
            catch (NullPointerException e)
            {
                System.out.println("Invalid Card Number");
-            }
+           }
         }
         else if (action == 3){
             System.out.println("Which card do you want to replace?");
@@ -146,6 +141,10 @@ public class Player{
 
     public Enemy getCurrent_enemy(){
         return current_enemy;
+    }
+    public double roundNum(double num){
+        if (num - (num + 0.5) >= 0) return num + 1;
+        else return num;
     }
 
     public int getAttack_value(){
